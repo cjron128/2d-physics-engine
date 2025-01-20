@@ -1,0 +1,42 @@
+# Ignore build files and directories
+/build/
+CMakeFiles/
+CMakeCache.txt
+Makefile
+cmake_install.cmake
+
+# Ignore compiled object files
+*.o
+*.obj
+
+# Ignore compiled libraries
+*.lib
+*.a
+*.so
+*.dll
+*.dylib
+
+# Ignore executable files
+*.exe
+*.out
+*.app
+
+# Ignore temporary/system files
+*.tmp
+*.log
+*.bak
+*.swp
+*.DS_Store
+Thumbs.db
+
+# Ignore SFML-related binaries (if precompiled SFML is included)
+third_party/SFML/lib/
+third_party/SFML/bin/
+
+# Ignore user-specific IDE/project files
+.idea/
+.vscode/
+*.iml
+
+# Ignore test build outputs
+/tests/build/
