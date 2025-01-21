@@ -9,6 +9,6 @@ private:
 
 public:
     Circle(const sf::Vector2f& position, float radius);
-    void update(float deltaTime) override;
+    void update(float deltaTime, const sf::RenderWindow& window) override;
     void render(sf::RenderWindow& window) const override;
 };

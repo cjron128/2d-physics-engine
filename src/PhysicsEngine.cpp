@@ -6,12 +6,15 @@ void PhysicsEngine::addEntity(std::shared_ptr<Entity> entity) {
     entities.push_back(entity);
 }
 
-void PhysicsEngine::update(float deltaTime) {
+void PhysicsEngine::update(float deltaTime, const sf::RenderWindow& window) {
     for (auto& entity : entities) {
-        entity->update(deltaTime);
+        entity->update(deltaTime, window);
     }
 }
 
-void PhysicsEngine::render() {
-    // Render functionality to be implemented with SFML in main.cpp
+
+void PhysicsEngine::render(sf::RenderWindow& window) {
+    for (const auto& entity : entities) {
+        entity->render(window);
+    }
 }

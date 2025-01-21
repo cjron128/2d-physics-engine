@@ -4,7 +4,8 @@
 #include <memory>
 #include "Entity.h"
 
-class PhysicsEngine {
+class PhysicsEngine
+{
 private:
     std::vector<std::shared_ptr<Entity>> entities;
     float gravity;
@@ -12,6 +13,6 @@ private:
 public:
     PhysicsEngine(float gravity = 9.8f);
     void addEntity(std::shared_ptr<Entity> entity);
-    void update(float deltaTime);
-    void render(); // To be implemented with SFML
+    void update(float deltaTime, const sf::RenderWindow &window);
+    void render(sf::RenderWindow& window);
 };
